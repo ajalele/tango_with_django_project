@@ -6,4 +6,5 @@ def index(request):
 	return render(request, 'rango/index.html', context)
 	
 def about(request):
-	return HttpResponse('Rango says here is the about page.<br />Check out the about page -> <a href="/rango/">Index</a>')
+	context = {'boldmessage': 'This tutorial has been put together by AJ Abrahamsen.'}
+	return render(request, 'rango/about.html', context)
